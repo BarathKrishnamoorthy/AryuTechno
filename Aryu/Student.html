@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Student.css">
+    <title>College Project</title>
+    <script type="text/javascript">
+        function display() {
+            alert('Our Team will get back to You');
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img class="logo" src="o2.png" alt="Logo">
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="intro">
+                <h1>COLLEGE PROJECT</h1>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <form action="http://localhost:3001/student" method="post" enctype="multipart/form-data">
+                <div class="box">
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="text" placeholder="Email ID" name="emailID" required>
+                    <input type="text" placeholder="Age" name="age" required>
+                    <input type="text" placeholder="Father Name" name="fathername" required>
+                    <input type="text" placeholder="Mother Name" name="mothername" required>
+                    <input type="text" placeholder="Phone Number" name="phonenumber" required>
+                    <input type="text" placeholder="City" name="city" required>
+                    <input type="text" placeholder="College" name="college" required>
+                    <input type="text" placeholder="Year of Pursuing" name="yearofpursuing" required>
+                    <p>Explain your Idea :</p>
+                    <textarea name="textarea" id="" style="height: 200px;"
+                        placeholder="Enter your ideas here"></textarea>
+                    <label for="idPath">Upload Your College ID:</label>
+                    <input type="file" id="idPath" name="idPath" required>
+                    <button type="submit" value="Submit" onclick="display()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

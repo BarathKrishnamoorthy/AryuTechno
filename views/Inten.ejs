@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Aryu/Inten.css">
+    <title>Intern Opportunity</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+    
+    <div class="container">
+        <div class="content">
+            <div class="intro">
+                <h1>INTERN OPPORTUNITY</h1>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <form action="/intern" method="post" enctype="multipart/form-data">
+                <div class="box">
+                    <input type="text" placeholder="Name" id="name" name="name" value="<%= formData.name %>" required>
+                    <% if (errors.name) { %>
+                        <p id="name-error" class="error-message"><%= errors.name %></p>
+                    <% } %>
+
+                    <input type="text" placeholder="Email ID" id="emailID" name="emailID" value="<%= formData.emailID %>" required>
+                    <% if (errors.emailID) { %>
+                        <p id="emailID-error" class="error-message"><%= errors.emailID %></p>
+                    <% } %>
+
+                    <input type="number" placeholder="Age" id="age" name="age" value="<%= formData.age %>" min="18" max="60" required>
+                    <% if (errors.age) { %>
+                        <p id="age-error" class="error-message"><%= errors.age %></p>
+                    <% } %>
+
+                    <input type="text" placeholder="Mobile Number" id="mobilenumber" name="mobilenumber" value="<%= formData.mobilenumber %>" maxlength="10" required>
+                    <% if (errors.mobilenumber) { %>
+                        <p id="mobilenumber-error" class="error-message"><%= errors.mobilenumber %></p>
+                    <% } %>
+
+                    <input type="text" placeholder="City" id="city" name="city" value="<%= formData.city %>" required>
+                    <% if (errors.city) { %>
+                        <p id="city-error" class="error-message"><%= errors.city %></p>
+                    <% } %>
+
+                    <input type="text" placeholder="College" id="college" name="college" value="<%= formData.college %>" required>
+                    <% if (errors.college) { %>
+                        <p id="college-error" class="error-message"><%= errors.college %></p>
+                    <% } %>
+
+                    <input type="text" placeholder="Year of Passout" id="yearofpassout" name="yearofpassout" value="<%= formData.yearofpassout %>" maxlength="4" required>
+                    <% if (errors.yearofpassout) { %>
+                        <p id="yearofpassout-error" class="error-message"><%= errors.yearofpassout %></p>
+                    <% } %>
+
+                    <p>Which role are you looking for:</p>
+                    <select name="role" id="role" required>
+                        <option value="" disabled>Select your role</option>
+                        <option value="Digital Marketing" <%= formData.role === 'Digital Marketing' ? 'selected' : '' %>>Digital Marketing</option>
+                        <option value="HR Recruiter" <%= formData.role === 'HR Recruiter' ? 'selected' : '' %>>HR Recruiter</option>
+                        <option value="3D VFX Artist" <%= formData.role === '3D VFX Artist' ? 'selected' : '' %>>3D VFX Artist</option>
+                        <option value="3D Modeling Design Engineer" <%= formData.role === '3D Modeling Design Engineer' ? 'selected' : '' %>>3D Modeling Design Engineer</option>
+                        <option value="Business Development" <%= formData.role === 'Business Development' ? 'selected' : '' %>>Business Development</option>
+                        <option value="UI & UX" <%= formData.role === 'UI & UX' ? 'selected' : '' %>>UI & UX</option>
+                        <option value="Node JS Developer" <%= formData.role === 'Node JS Developer' ? 'selected' : '' %>>Node JS Developer</option>
+                        <option value="Python Developer" <%= formData.role === 'Python Developer' ? 'selected' : '' %>>Python Developer</option>
+                        <option value="WordPress Developer" <%= formData.role === 'WordPress Developer' ? 'selected' : '' %>>WordPress Developer</option>
+                        <option value="MEAN Stack Developer" <%= formData.role === 'MEAN Stack Developer' ? 'selected' : '' %>>MEAN Stack Developer</option>
+                    </select>
+                    <% if (errors.role) { %>
+                        <p id="role-error" class="error-message"><%= errors.role %></p>
+                    <% } %>
+
+                    <label for="resume">Upload Your Resume:</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                    <% if (errors.resume) { %>
+                        <p id="resume-error" class="error-message"><%= errors.resume %></p>
+                    <% } %>
+
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+</body>
+
+</html>

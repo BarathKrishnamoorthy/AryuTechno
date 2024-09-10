@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Aryu Technology Career</title>
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Aryu Technology Career</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img class="logo" src="o2.png" alt="Aryu Logo">
+            <ul >
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+            <div class="menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="text">
+                <h1>Work at the heart <br>of change</h1>
+                <p>This is a place to grow, learn and connect. Everything that <br> makes you who you are is welcome here.</p>
+                <button><a href="Inten.html"><b>Internship</b></a></button>
+                <button><a href="Student.html"><b>College Project</b></a></button>
+            </div>
+        </div>
+    </div>
+    <div class="container1" id="about">
+        <div class="about">
+            <h1>WHO WE ARE?</h1>
+            <p>We’re on a mission to deliver engaging</p>
+        </div>
+        <div class="aboutus">
+            <div class="video-text">
+                <h2>Transform Your Learning into Career Success with Aryu Academy</h2>
+                <p>We offer engaging courses combined with hands-on internships and immersive office experiences. Our approach delivers real-world insights and practical skills, backed by personalized guidance from industry experts. Join us to transform your learning into career success.</p>   
+                <button><a href="Inten.html"><b>Internship</b></a></button>
+            </div>
+            <div class="video-container">
+                <video autoplay loop muted playsinline class="video">
+                    <source src="aryu2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="aboutus2">
+            <div class="video2"> 
+                <video autoplay loop muted playsinline class="video1">
+                    <source src="aryu3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-text2">
+                <h2>Interactive Learning with High Engagement</h2>
+                <p>At Aryu Academy, learning is both enjoyable and engaging. Our interactive courses are customized to fit your learning style, with passionate instructors using innovative methods to keep you motivated.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="contact-section" id="contact">
+            <div class="contact-wrapper">
+                <div class="contact-container">
+                    <h1>Contact Us</h1>
+                    <form action="http://localhost:3001/contact" method="POST" class="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required aria-label="Name">
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="emailID" name="emailID" required aria-label="Email">
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required aria-label="Message" placeholder="Write your Queues"></textarea>
+                        
+                        <button type="submit" value="Submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+   <script>
+const menu =document.querySelector('.menu')
+const menuList=document.querySelector('nav ul')
+menu.addEventListener('click',()=>{
+    menuList.classList.toggle('showmenu')
+})
+   </script>
+</body>
+</html>

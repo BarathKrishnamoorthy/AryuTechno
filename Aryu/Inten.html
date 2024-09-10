@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Aryu/Inten.css">
+    <title>Intern Opportunity</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img class="logo" src="o2.png" alt="Logo">
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="intro">
+                <h1>INTERN OPPORTUNITY</h1>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <form action="http://localhost:3001/intern" method="post" enctype="multipart/form-data">
+                <div class="box">
+                    <input type="text" placeholder="Name" id="name" name="name"  required>
+                   
+
+                    <input type="text" placeholder="Email ID" id="emailID" name="emailID" required>
+                   
+                    <input type="text" placeholder="Age" id="age" name="age" min="18" max="60"  required>
+                   
+                    <input type="text" placeholder="Mobile Number" id="mobilenumber" name="mobilenumber" maxlength="10" required>
+                   
+                    <input type="text" placeholder="City" id="city" name="city"  required>
+                   
+                    <input type="text" placeholder="College" id="college" name="college"  required>
+                   
+                    <input type="text" placeholder="Year of Passout" id="yearofpassout" name="yearofpassout" maxlength="4"  required>
+                   
+                    <p>Which role are you looking for:</p>
+                    <select name="role" id="role" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="HR Recruiter">HR Recruiter</option>
+                        <option value="3D VFX Artist">3D VFX Artist</option>
+                        <option value="3D Modeling Design Engineer">3D Modeling Design Engineer</option>
+                        <option value="Business Development">Business Development</option>
+                        <option value="UI & UX">UI & UX</option>
+                        <option value="Node JS Developer">Node JS Developer</option>
+                        <option value="Python Developer">Python Developer</option>
+                        <option value="WordPress Developer">WordPress Developer</option>
+                        <option value="MEAN Stack Developer">MEAN Stack Developer</option>
+                    </select>
+                   
+                    <label for="resume">Upload Your Resume:</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                   
+                    <button type="submit" value="Submit" >Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
